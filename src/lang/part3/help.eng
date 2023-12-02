@@ -1,0 +1,396 @@
+Tonigy documentation.
+
+		About Tonigy
+ 
+Tonigy v1.1. Audio CD IFS for OS/2. The smart replacement of grabbers. 
+
+Tonigy is an Audio CD IFS for OS/2 that maps tracks of Audio CD into WAV or RAW
+files. Use it to accessing audio  tracks like ordinary files. 
+
+Main features: 
+
+ IFS for OS/2 
+ represents tracks as WAV or RAW files 
+ easy control and setup by PM GUI panel 
+ English/German interface and documentation 
+ supports extended attributes (reading/writing) 
+ supports adaptive Anti-Jittering 
+ "Highest Priority" option for slow CD-ROM drives and PCs 
+ logging warning and error messages 
+ supports control through named pipe 
+  
+		Usage Help
+
+Press the F1 key to call the online help when using Tonigy. 
+
+		Quick start
+    
+1. Run the Tonigy program object from the Tonigy WPS folder. 
+2. Select a CD-ROM drive that will be used by Tonigy. 
+3. Push the Setup button or press Alt+S. 
+4. Select any free (not BUSY) letter for a Tonigy drive in the Setup dialog. 
+5. Push the OK button or press Enter to close the Setup dialog. 
+6. Push the Attach button or press Alt+A to attach the Tonigy drive. 
+7. Work with the Tonigy drive. 
+8. After working close the Tonigy program. It will detach the Tonigy drive
+automaticly. 
+  
+If you want to to use the German interface and help, call pop-up menu (by
+clicking button 2 of the pointing device on the Main window's workspace), 
+switch Language to German and restart Tonigy. 
+
+		Main window
+
+You can use following keys to control the Tonigy main window: 
+
+Alt+A               Attach drive 
+Alt+D               Detach drive 
+Alt+S               Setup drive 
+Alt+X or Alt+F4     Exit 
+  
+Use the "General options" choice in the pop-up menu (called by clicking button
+2 of the pointing device on the main window's workspace) to change global
+Tonigy settings. 
+
+If the "Autoattach" is on, this drive will be attached automaticly when Tonigy
+is started. 
+
+Warning: All Tonigy drives will be detached automaticly when Tonigy is closed. 
+
+		Setup Drive Window
+
+ 
+If the "Automatic attach" option is enabled, the drive will be attached
+automaticly when Tonigy is started. 
+
+You can log all important Tonigy events into the virtual TONIGY.LOG file on
+a Tonigy drive by enabling "Log warnings and errors" options. 
+
+Some CD-ROM drive models has troubles with synchronization of reading (jitter).
+To correct such troubles, you can use the "Anti-Jittering" feature of Tonigy.
+To determine presence of jitter, work with any RAW or WAV file from a Tonigy
+drive (copy this file, play it or view it by HEX-editor; state of
+"Anti-Jittering" options is unimportant). Then search the CDINFO.TXT on the
+Tonigy drive for a text after line 
+
+x audio blocks(s).
+ 
+If this text is 
+
+This CD-ROM drive has no troubles with syncrohization of reading.
+ 
+you may disable "Anti-Jittering". 
+
+Note: "Anti-Jittering" slows reading speed, therefore disable it if the CD-ROM
+drive has no jitter and you want to increase track reading speed. 
+
+The "Tries to correct" option sets the amount of attempts to correct troubles
+with syncronization of reading. If troubles cannot be corrected after choosed
+amount of attempts, a really readed data will be returned to program, which
+using a Tonigy drive (see also TONIGY.LOG). If you use a slow CD-ROM drive and
+listen to WAV or RAW files from a Tonigy drive, the recommended amount of
+attempts is value in the range 2 through 5. But when WAV or RAW files are
+encoded (copied) from a Tonigy drive or a enough fast CD-ROM drive is used, set
+a bigger value. One try only is not recommended anyway. 
+
+		General Options window
+ 
+"Highest priority" changes the execution priority of the sectors reading thread.
+If this options is enabled, the time-critical priority class and priority level
+31 are set for the reading thread. Otherwise, the reading thread has the
+regular priority class and priority level 31. 
+
+"Language" radio buttons set the interface language. You should restart Tonigy
+to apply language change. 
+
+		Attach Failed window
+ 
+This window is displayed when Tonigy cannot attach a Tonigy drive. The most
+popular reason of such error is the selection a busy drive letter for a Tonigy
+drive. Select another drive letter for a Tonigy drive and try to attach again. 
+
+		Information for advanced users
+ 
+This sections contains an information for advanced users. 
+
+		Anti-Jittering
+ 
+An idea of Anti-Jittering is to read sectors with some overlap. Many grabbers
+uses such idea to correct Jitter, but Tonigy provide new methods for more smart
+and reliable Jitter correction. First, a size of the overlap (preread) can be
+changed by Tonigy dynamicly using a statistical information from previous
+sectors reading. Second, Tonigy's Anti-Jittering gives heed to unstable 
+results of sectors reading. 
+
+		Extended Attributes
+ 
+Tonigy IFS supports reading and writing of extended attributes. 
+
+Extended attributes of *.WAV and *.RAW files are compact-disk-dependent. 
+
+Tonigy stores extended attributes in the EA.INI file in the Tonigy directory.
+This file is a standard OS/2 user profile (a binary INI file). 
+
+		Named pipe
+ 
+Tonigy can be controlled through the \PIPE\TONIGY\CONTROL named pipe. This pipe
+is a message pipe, a command should be written to the pipe as one message. A
+command consists of one case insensitive word (a name of the command) and, in
+some cases, one or more parameters divided by the one space symbol. 
+For example: 
+
+QueryDrivesNumber
+attach 1
+ 
+After writing a command to the control named pipe, a program have to read a
+return string. A return string begins with a decimal return code. If the
+command can return a data and the decimal return code is equal to zero (no 
+errors), the rest of the return string contains a returned data. For example: 
+
+0
+31
+0 E:
+ 
+		QueryDrivesNumber
+
+Remarks 
+
+The command queryes the number of CD-ROM drives. 
+
+Parameters 
+
+None 
+
+Returns 
+
+ErrorCode 
+or 
+0 NumberOfDrives. 
+
+Example 
+
+Sended:             QueryDrivesNumber 
+Received:           0 2 
+Comment:            There are two CD-ROM drives. 
+  
+		QueryCDROMDrive
+ 
+Remarks 
+
+The command queryes the letter of CD-ROM drive. 
+
+Parameters 
+
+NumberOfDrive 
+the number of the drive in the range 0 through N-1, where N is the number of
+CD-ROM drives 
+
+Returns 
+
+ErrorCode 
+or 
+0 LetterOfCDROMDrive. 
+
+Example 
+
+Sended:             QueryCDROMDrive 1 
+Received:           0 E: 
+Comment:            A letter of the second CD-ROM drive is F:. 
+  
+
+		QueryTonigyDrive
+ 
+Remarks 
+
+The command queryes the letter of the Tonigy drive. 
+
+Parameters 
+
+NumberOfDrive 
+the number of the drive in the range 0 through N-1, where N is the number of
+CD-ROM drives 
+
+Returns 
+
+ErrorCode 
+or 
+0 LetterOfTonigyDrive. 
+if the letter of the Tonigy drive is not selected, en empty string is returned
+as LetterOfTonigyDrive 
+
+Example 
+
+Sended:             QueryTonigyDrive 1 
+Received:           0 T: 
+Comment:            A letter of the second Tonigy drive drive is T:. 
+
+		QueryStatus  
+ 
+Remarks 
+
+The command queryes the status of the Tonigy drive. 
+
+Parameters 
+
+NumberOfDrive 
+the number of the drive in the range 0 through N-1, where N is the number of
+CD-ROM drives 
+
+Returns 
+
+ErrorCode 
+or 
+0 Status 
+0 as Status - the drive is detached, 1 as Status - the drive is attached 
+
+Example 
+
+Sended:             QueryStatus 1 
+Received:           0 0 
+Comment:            The second Tonigy drive is detached. 
+
+		Attach
+ 
+Remarks 
+
+The command attach the Tonigy drive. 
+
+Parameters 
+
+NumberOfDrive 
+the number of the drive in the range 0 through N-1, where N is the number of
+CD-ROM drives 
+
+Returns 
+
+ErrorCode 
+
+Example 
+
+Sended:             Attach 1 
+Received:           0 
+Comment:            The second Tonigy drive has been attached. 
+  
+		Detach
+ 
+Remarks 
+
+The command detach the Tonigy drive. 
+
+Parameters 
+
+NumberOfDrive 
+the number of the drive in the range 0 through N-1, where N is the number of
+CD-ROM drives 
+
+Returns 
+
+ErrorCode 
+
+Example 
+
+Sended:             Detach 1 
+Received:           0 
+Comment:            The second Tonigy drive has been detached. 
+  
+
+		Usage example (REXX)
+
+[...]
+say "Tonigy is not running."
+[...]
+say "Drives: "Drives
+[...]
+say "Press any key to detach all Tonigy drives"
+[...]
+say "Press any key to attach all Tonigy drives"
+[...]
+Status="attached"
+[...]
+Status="detached"
+[...]
+say "Drive"
+
+		TONIGY.LOG
+
+ 
+TONIGY.LOG messages: 
+
+ Drive x is attached
+
+The Tonigy drive is attached by user or automaticly. 
+
+ Header of CD is rescaned
+ 
+Tonigy detected a compact disk change and header of compact disk is rescaned. 
+
+ Jitter is detected, but Anti-Jittering is disabled
+ 
+Tonigy detected Jitter during track or block opening, but Anti-Jittering is
+disabled. You should enable Anti-Jittering for this Tonigy drive. 
+
+ Warning: LONG READ failed (track x, sector x)
+ Warning: LONG READ failed (block x, sector x)
+ 
+The LONG READ command returned an error code. The LONG READ command will be
+runned over again. 
+
+ Error: LONG READ failed (track x, sector x) 
+ Error: LONG READ failed (block x, sector x)
+ 
+The LONG READ command returned an error code after the 5th try. You should use
+another compact disk or change the CD-ROM drive. 
+
+ Warning: Anti-Jittering failed (track x, sector x)
+ Warning: Anti-Jittering failed (block x, sector x)
+ 
+Jitter of the readed data cannot be corrected. The LONG READ command and
+Anti-Jittering will be runned over again. 
+
+ Error: Anti-Jittering failed (track x, sector x)
+ Error: Anti-Jittering failed (block x, sector x)
+ 
+Jitter of the readed data cannot be corrected after choosed amount of tries.
+You should change the CD-ROM drive or use another compact disk. 
+
+		History
+
+Version 1.1
+
+ 
+ Version 1.1 
+
+NEW: Information about sectors blocks is added to CDINFO.TXT 
+NEW: BLOCKS.RAW directory 
+NEW: Pop-up menu in the main window 
+NEW: "General Option" dialog 
+NEW: "Highest Priority" option 
+NEW: German interface and documentation 
+NEW: First letter of CD-ROM drives selection 
+NEW: Logging warning and error messages into a virtual file on a Tonigy disk 
+NEW: Online help (English and German). 
+NEW: Named pipe for control Tonigy 
+CHG: Background color of the main window is changed to pale gray 
+CHG: New method of Jitter detection 
+CHG: README file is renamed to README.TXT 
+CHG: RAW directory is renamed to TRACKS.RAW 
+CHG: Tonigy web site URL and support E-Mail are changed 
+CHG: Minor changes 
+  
+		License Information
+
+<License Information here>
+
+		Registration
+ 
+The registration fee is only $20. Once registered you remain a registered user
+for all future Tonigy versions. For an additional information about
+registration read DOC\REGISTER.TXT file or visit the Tonigy site
+(http://somewhere.in.the.net). 
+
+		Support and Feedback
+
+Send questions, bug reports and suggestions to username@domainname.com
+Visit the Tonigy site: http://somewhere.in.the.net
+
+<please add an information about yourself here>

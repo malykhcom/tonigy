@@ -1,0 +1,43 @@
+#include <os2.h>
+#include "tonigy.h"
+
+POINTER 1 "..\\tonigy.ico"
+
+rcinclude tonigy.dlg
+
+MENU IDM_MAIN
+{
+	MENUITEM "", ID_ATTACH
+	MENUITEM "", ID_DETACH
+	MENUITEM SEPARATOR
+        MENUITEM "", ID_EJECT
+	MENUITEM SEPARATOR
+	MENUITEM "", ID_SETUP
+	MENUITEM SEPARATOR
+	MENUITEM "", ID_EXIT
+}
+
+ACCELTABLE ID_MAIN
+{
+	"a", ID_ATTACH, CHAR, ALT
+        "A", ID_ATTACH, CHAR, ALT
+        "d", ID_DETACH, CHAR, ALT
+        "D", ID_DETACH, CHAR, ALT
+        "s", ID_SETUP, CHAR, ALT
+        "S", ID_SETUP, CHAR, ALT
+        "x", ID_EXIT, CHAR, ALT
+        "X", ID_EXIT, CHAR, ALT
+}
+
+HELPTABLE ID_MAIN
+{
+	HELPITEM ID_MAIN, IDH_DUMMY, 1
+        HELPITEM ID_SETUP, IDH_DUMMY, 2
+	HELPITEM IDD_ATTACH, IDH_DUMMY, 5
+}
+
+HELPSUBTABLE IDH_DUMMY
+{
+}
+
+BITMAP IDB_CORNER bitmap\corner.bmp

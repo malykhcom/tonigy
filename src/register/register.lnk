@@ -1,0 +1,4 @@
+system os2v2_pm
+op stack=64k
+lib ..\..\..\rsaeuro\rsaeuro.lib
+file register.obj

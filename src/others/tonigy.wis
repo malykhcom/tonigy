@@ -1,0 +1,94 @@
+<WARPIN>
+<HEAD>
+<REXX NAME="GetPath">
+call RxFuncAdd "SysLoadFuncs", "REXXUTIL", "SysLoadFuncs"
+call SysLoadFuncs
+
+sysdisk=FileSpec("drive", SysSearchPath("PATH", "OS2"))
+if sysdisk="" then sysdisk="c:"
+config=sysdisk"\CONFIG.SYS"
+tonigy="TONIGY.IFS"
+ret="$(WARPIN_DEFAULTAPPSPATH)\Tonigy"
+if Stream(config, "c", "open read")="READY:" then
+do
+    do while lines(config)
+        line=LineIn(config)
+        parse var line t1"="t2
+        t1=Strip(t1)
+        t2=Strip(Strip(t2),, '"');
+        lp=Lastpos("\", t2)
+        if Translate(t1)="IFS" & Translate(Substr(t2, lp+1))=tonigy then
+            ret=Left(t2, lp-1)
+    end
+    call Stream config, "c", "close"
+end
+return ret
+</REXX>
+<PCK INDEX=1  PACKAGEID="DEF Group\Tonigy\Main\1\5\0" TITLE="Tonigy IFS"
+ TARGET="=("GetPath")" BASE NODESELECT
+ CONFIGSYS=IFS="$(1)\TONIGY.IFS"|UNIQUE(TONIGY.IFS)
+ CREATEOBJECT="WPFolder|Tonigy v1.7|<WP_DESKTOP>|OBJECTID=<TONIGY17FOLDER>;"
+ CREATEOBJECT="WPProgram|Tonigy|<TONIGY17FOLDER>|EXENAME=$(1)\TONIGY.EXE;"
+ CREATEOBJECT="WPProgram|Register Tonigy|<TONIGY17FOLDER>|EXENAME=$(1)\REGISTER.EXE;"
+ CREATEOBJECT="WPShadow|README.TXT|<TONIGY17FOLDER>|SHADOWID=$(1)\README.TXT;" 
+ CREATEOBJECT="WPProgram|Tonigy documentation|<TONIGY17FOLDER>|EXENAME=view.exe;PARAMETERS=$(1)\TONIGY.INF;"
+ CREATEOBJECT="WPUrl|Tonigy homepage|<TONIGY17FOLDER>|URL=http://www.tonigy.com;"  
+ >The main package of Tonigy.</PCK>
+</HEAD>
+<BODY>
+<PAGE INDEX=1 TYPE=TEXT>
+<NEXTBUTTON TARGET=2>~Next</NEXTBUTTON>
+<TEXT>Welcome!
+
+This is an installer of Tonigy v1.7.
+
+Tonigy is an Audio/Video/Data CD IFS for OS/2 that maps tracks of Audio CD into WAV or RAW files, tracks of Video CD into MPG files and tracks of Data CD into ISO files. Use it for accessing audio, video and data tracks like ordinary files. Also Tonigy allows to access files of CD-I disks and the boot image of ISO tracks.
+
+Select "Next" to begin installation.
+Select "Cancel" to abort installation.</TEXT>
+</PAGE>
+<PAGE INDEX=2 TYPE=README>
+<TEXT>To proceed with the installation, you must accept this License Agreement.</TEXT>
+<README FORMAT=HTML><p>NOTICE TO USERS: CAREFULLY READ THE FOLLOWING LEGAL AGREEMENT. USE OF THE
+SOFTWARE PROVIDED WITH THIS AGREEMENT (THE "SOFTWARE") CONSTITUTES YOUR
+ACCEPTANCE OF THESE TERMS. IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT,
+DO NOT INSTALL AND/OR USE THIS SOFTWARE. USER'S USE OF THIS SOFTWARE IS
+CONDITIONED UPON COMPLIANCE BY USER WITH THE TERMS OF THIS AGREEMENT.
+
+<p>LICENSE GRANT. DEF Group grants you a license to use one copy of this SOFTWARE
+on any one hardware product for as many licenses as you purchase. "You" means
+the company, entity or individual whose funds are used to pay the license fee.
+"Use" means storing, loading, installing, executing or displaying the SOFTWARE.
+You may not modify the SOFTWARE or disable any licensing or control features of
+the SOFTWARE except as an intended part of the SOFTWARE's programming features.
+When you first obtain a copy of the SOFTWARE, you are granted an evaluation
+period of not more than 30 days, after which time you must pay for the SOFTWARE
+according to the terms and prices discussed in the SOFTWARE's documentation, or
+you must remove the SOFTWARE from your computer. This license is not
+transferable to any other hardware product or other company, entity, or
+individual.
+
+<p>NO OTHER WARRANTIES. DEF GROUP DOES NOT WARRANT THAT THE SOFTWARE IS ERROR
+FREE. DEF GROUP DISCLAIMS ALL OTHER WARRANTIES WITH RESPECT TO THE SOFTWARE,
+EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD
+PARTY RIGHTS. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED
+WARRANTIES OR LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY MAY LAST, OR THE
+EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE
+LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU. THIS WARRANTY GIVES YOU 
+SPECIFIC LEGAL RIGHTS AND YOU MAY ALSO HAVE OTHER RIGHTS WHICH VARY FROM 
+JURISDICTION TO JURISDICTION.<br>
+
+</README>
+<NEXTBUTTON TARGET=3>I ~agree</NEXTBUTTON>
+</PAGE>
+<PAGE INDEX=3 TYPE=CONTAINER>
+<NEXTBUTTON TARGET=4>~Next</NEXTBUTTON>
+<TEXT>On this page, you may change the target directory, where Tonigy will be installed in.</TEXT>
+</PAGE>
+<PAGE INDEX=4 TYPE=CONFIGURE>
+<NEXTBUTTON TARGET=0>I~nstall</NEXTBUTTON>
+<TEXT>Press "Install" to begin installing.</TEXT>
+</PAGE>
+</BODY>
+</WARPIN>

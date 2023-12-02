@@ -1,0 +1,47 @@
+DLGINCLUDE 1 "tonigy.h"
+
+DLGTEMPLATE IDD_SETUP LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_SETUP, 15, 37, 152, 100, NOT FS_DLGBORDER | WS_VISIBLE, 
+            FCF_NOBYTEALIGN
+    BEGIN
+        GROUPBOX        "", ID_TONIGY_, 4, 56, 144, 41
+        LTEXT           "", ID_LETTER_, 9, 80, 68, 8, DT_VCENTER
+        CONTROL         "", ID_LETTER, 81, 0, 63, 89, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        AUTOCHECKBOX    "", ID_AUTOATTACH, 9, 68, 135, 10
+        AUTOCHECKBOX    "", ID_LOG, 9, 58, 135, 10
+        GROUPBOX        "", ID_READING_, 4, 11, 144, 44
+        AUTOCHECKBOX    "", ID_AJ, 9, 14, 135, 10
+        LTEXT           "", ID_PREREAD_, 9, 37, 68, 8
+        CONTROL         "", ID_PREREAD, 78, 0, 66, 46, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        LTEXT           "", ID_TRIES_, 9, 27, 68, 8
+        CONTROL         "", ID_TRIES, 78, 0, 66, 36, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE IDD_OPTIONS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_OPTIONS, 15, 18, 152, 111, NOT FS_DLGBORDER | WS_VISIBLE, 
+            FCF_NOBYTEALIGN
+    BEGIN
+        GROUPBOX        "", ID_CDDRIVES_, 4, 87, 144, 23
+        LTEXT           "", ID_CDLETTER_, 9, 93, 63, 8
+        CONTROL         "", ID_CDLETTER, 73, 17, 71, 85, WC_COMBOBOX, 
+                        CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        GROUPBOX        "", ID_READING_, 4, 65, 144, 21
+        AUTOCHECKBOX    "", ID_HIPRIO, 9, 68, 135, 10
+        GROUPBOX        "", ID_LANG_, 4, 3, 144, 61
+        AUTORADIOBUTTON "", ID_ENGLISH, 9, 45, 135, 10, WS_TABSTOP
+        AUTORADIOBUTTON "", ID_GERMAN, 9, 35, 135, 10, WS_TABSTOP
+        AUTORADIOBUTTON "", ID_RUSSIAN, 9, 25, 135, 10, WS_TABSTOP
+        LTEXT           "", ID_APPLY_, 9, 15, 134, 8
+        LTEXT           "", ID_APPLY2_, 10, 8, 134, 8
+    END
+END

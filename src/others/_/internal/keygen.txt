@@ -1,0 +1,17 @@
+Tonigy keys generator. FOR INTERNAL USAGE ONLY.
+
+Usage: keygen "User Name"
+
+Keygen is a 32-bit program for OS/2.
+
+A registration key for "User Name" is written on the Standard Output file.
+All Keygen messages are written on the Standard Error file.
+A "User Name" cannot be larger than 29 symbols.
+
+Registration key is TWO lines of symbols. User should copy this lines into
+the clipboard. Then run the Register program from the Tonigy package, insert
+the key from the clipboard into a text entry field and press Ok button.  After
+these actions Tonigy should be restarted.
+
+Example:
+keygen "Joe Doe">mail.inc

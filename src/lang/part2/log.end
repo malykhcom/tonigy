@@ -1,0 +1,7 @@
+22.03.2001 12:00:01 | Drive T: is attached
+22.03.2001 12:00:02 | Header of CD is rescaned
+22.03.2001 12:00:03 | Jitter is detected, but Anti-Jittering is disabled
+22.03.2001 12:00:04 | Warning: LONG READ failed (track 1, sector 1)
+22.03.2001 12:00:05 | Error: LONG READ failed (track 1, sector 1)
+22.03.2001 12:00:06 | Warning: Anti-Jittering failed (track 1, sector 1)
+22.03.2001 12:00:07 | Error: Anti-Jittering failed (track 1, sector 1)

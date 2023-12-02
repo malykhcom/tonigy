@@ -1,0 +1,7 @@
+22.03.2001 12:00:01 | Laufwerk T: ist verbunden
+22.03.2001 12:00:02 | Header der CD ist eingelesen
+22.03.2001 12:00:03 | Jitter entdeckt, aber Anti-Jitter ausgeschaltet
+22.03.2001 12:00:04 | Warnung: LONG READ gescheitert (Track 1, Sektor 1)
+22.03.2001 12:00:05 | Fehler: LONG READ gescheitert (Track 1, Sektor 1)
+22.03.2001 12:00:06 | Warnung: Anti-Jitter gescheitert (Track 1, Sektor 1)
+22.03.2001 12:00:07 | Fehler: Anti-Jitter gescheitert (Track 1, Sektor 1)

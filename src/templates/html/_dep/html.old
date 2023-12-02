@@ -1,0 +1,134 @@
+#define copy &copy;
+
+#define start <html>%\
+<head>%\
+<title>Tonigy - {$Title}</title>%\
+<meta name="description" content="{$Desc}">%\
+<meta name="keywords" content="{$Keywords}">%\
+<style type="text/css"><!--%\
+a { text-decoration: none; }%\
+a:hover { text-decoration: none; color: #40c000; }%\
+--> </style>%\
+</head>%\
+<body bgcolor=#e6e6e6 text=#000000 link=#0000ff vlink=#0000ff alink=#40c000%\
+topmargin=2 leftmargin=2 rightmargin=2 bottommargin=2%\
+marginwidth=2 marginheight=2>%\
+<table bgcolor=#000000 width=100% cellspacing=0 cellpadding=0 border=0>%\
+%\
+<tr><td>%\
+<table width=100% cellspacing=1 cellpadding=0 border=0>%\
+%\
+<tr><td bgcolor=#e6e6e6 colspan=2>%\
+<table width=100% cellspacing=0 cellpadding=8 border=0>%\
+  <tr><td>%\
+  <table width=100% cellspacing=0 cellpadding=0 border=0>%\
+  <tr><td width=50% align=right><b>Tonigy</b>/</td>%\
+  <td width=50%><b>{$title}</b></td></tr></table>%\
+  </td></tr></table>%\
+</td></tr>%\
+<tr><td bgcolor=#e6e6e6 width=20% valign=top>%\
+  <table width=100% cellspacing=0 cellpadding=8 border=0>%\
+  <tr><td>Sections:</td></tr></table>%\
+  <table width=100% cellspacing=1 cellpadding=3 border=0>%\
+  <tr><td \
+#if ['{$section}' = '1'] \
+ bgcolor=#b0b0b0 \
+#endif \
+>&nbsp;&nbsp;&nbsp;<a href=index.html>About</a></td></tr>%\
+  <tr><td \
+#if ['{$section}' = '2'] \
+ bgcolor=#b0b0b0 \
+#endif \
+>&nbsp;&nbsp;&nbsp;<a href=faq.html>FAQ&nbsp;and&nbsp;Tips</a></td></tr>%\
+  <tr><td \
+#if ['{$section}' = '3'] \
+ bgcolor=#b0b0b0 \
+#endif \
+>&nbsp;&nbsp;&nbsp;<a href=history.html>History</a></td></tr>%\
+  <tr><td \
+#if ['{$section}' = '4'] \
+ bgcolor=#b0b0b0 \
+#endif \
+>&nbsp;&nbsp;&nbsp;<a href=screens.html>Screenshots</a></td></tr>%\
+  <tr><td \
+#if ['{$section}' = '5'] \
+ bgcolor=#b0b0b0 \
+#endif \
+>&nbsp;&nbsp;&nbsp;<a href=download.html>Download</a></td></tr>%\
+  <tr><td \
+#if ['{$section}' = '6'] \
+ bgcolor=#b0b0b0 \
+#endif \
+>&nbsp;&nbsp;&nbsp;<a href=register.html>Register Now!</a></td></tr>%\
+  <tr><td \
+#if ['{$section}' = '7'] \
+ bgcolor=#b0b0b0 \
+#endif \
+>&nbsp;&nbsp;&nbsp;<a href=links.html>Overviews and<br>&nbsp;&nbsp;&nbsp;related software</a></td></tr></table>%\
+  <table width=100% cellspacing=0 cellpadding=8 border=0>%\
+  <tr><td>E-Mail:</td></tr></table>%\
+  <table width=100% cellspacing=1 cellpadding=1 border=0>%\
+  <tr><td>&nbsp;&nbsp;&nbsp;<a href=mailto:<$Email>><$Email></a></td></tr></table>%\
+  <p>&nbsp;</p>%\
+  <p>&nbsp;</p>%\
+  <p>&nbsp;</p>%\
+</td>%\
+<td bgcolor=#ffffff valign=top width=80%>%\
+  <table width=100% cellspacing=0 cellpadding=8 border=0>%\
+  <tr><td>%\
+%\
+<!-- begin of main frame -->%\
+<?newline>
+
+#define end <?newline><!-- end of main frame -->%\
+%\
+  </td></tr></table>%\
+  <p>&nbsp;</p>%\
+</td></tr>%\
+<tr><td bgcolor=#e6e6e6 colspan=2>%\
+  <table width=100% cellspacing=0 cellpadding=4 border=0>%\
+  <tr><td align=center><font size=-1><$TonigyCopy></font></td>%\
+  </tr></table>%\
+  </td></tr>%\
+%\
+</table>%\
+%\
+</td></tr>%\
+</table>%\
+%\
+</body>%\
+</html>
+
+#define end2 <?newline><!-- end of main frame -->%\
+%\
+  <p>&nbsp;</p>%\
+</td></tr>%\
+<tr><td bgcolor=#e6e6e6 colspan=2>%\
+  <table width=100% cellspacing=0 cellpadding=4 border=0>%\
+  <tr><td align=center><font size=-1><$TonigyCopy></font></td>%\
+  </tr></table>%\
+  </td></tr>%\
+%\
+</table>%\
+%\
+</td></tr>%\
+</table>%\
+%\
+</body>%\
+</html>
+
+
+#define bold <b>{$#1}</b>
+#define center <p align=center>{$#1}</p>
+#define p <p align=justify>{$#1}</p>
+
+#define startlist <ul type=disc compact>
+#define list <li>{$#1}</li>
+#define endlist </ul>
+
+#define NEW <b>NEW</b>:<?space>
+#define INF <b>INF</b>:<?space>
+#define CHG <b>CHG</b>:<?space>
+#define FIX <b>FIX</b>:<?space>
+
+#define img <a href=images/{$Name}.gif><img src=images/{$Name}_s.gif width={$W} height={$H} border=1 alt="{$Size} bytes"></a>

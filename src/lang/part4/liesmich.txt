@@ -1,0 +1,65 @@
+                      Tonigy v1.0. Audio CD IFS for OS/2
+                       (c) Copyright Deffie Group, 2001.
+
+
+Tonigy. Audio CD IFS fÅr OS/2
+=============================
+
+Tonigy ist ein Programm, dass Audio-Tracks einer CD in WAV- oder RAW-Dateien
+auf ein neues, virtuelles Laufwerk ummappt. Dazu wird ein IFS (Installable File
+System=Installierbares Dateisystem) beim Programmstart Åber die CONFIG.SYS
+neu angelegt, dass dann, nach Aktivierung dieses Laufwerkes Åber das Programm,
+die Åblicherweise nicht sichtbaren Audio-Dateien Åber ganz normale Systembefehle
+oder Dateimanager wie den OS/2-Commander, FC/2, FM/2, FTE oder den EF/2
+zugÑnglich macht.
+
+Installation
+============
+
+VOR DER INSTALLATION MUSST DU DEN LIZENZTEXT LESEN UND IHM ZUSTIMMEN.
+
+1. Erstelle ein Verzeichnis und entpacke das Archiv da hinein.
+2. Starte INSTALL.CMD. Dieses Programm fÅgt die Zeile "IFS=BOOTLW\TONIGY.IFS"
+   zur CONFIG.SYS hinzu und erstellt einen WPS-Ordner fÅr das Tonigy-Objekt.
+3. Starte den Rechner neu.
+
+Update
+======
+
+Wenn auf eine neue Version von Tonigy upgedatet werden soll, fÅhre folgende
+Aktionen aus:
+
+1. Lîsche alle Dateien im Tonigy-Verzeichnis au·er: EA.INI, TONIGY.INI und
+   TONIGY.KEY.
+2. Entpacke das neue Archiv in dieses Verzeichnis.
+3. Lîsche den WPS-Ordner mit der alten Version von Tonigy.
+4. Starte INSTGER.CMD, um einen neuen Ordner zu erzeugen. Beantworte die Frage
+   nach dem Erzeugen einer neuen Zeile in der CONFIG.SYS diesmal mit "N".
+5. Starte den Rechner neu.
+
+
+Schnellstart
+============
+
+1. Starte das Tonigy-Programm aus dem WPS-Ordner.
+2. WÑhle das CD-ROM aus, dass Tonigy ansprechen soll.
+3. Klicke auf "Setup" oder drÅcke die Tastenkombination Alt+S.
+4. WÑhle irgendeinen freien, aber NICHT BUSY markierten Laufwerksbuchstaben
+   aus den vorhandenen aus, der zum Tonigy-Laufwerk wird [ich habe einfach T:
+   gewÑhlt ;-)  - KK].
+5. Klicke den OK-Button an oder drÅcke die ENTER-Taste um den Setup-Dialog zu
+   schlie·en.
+6. Klicke auf "Attach" oder drÅcke Alt+A, um das Tonigy-Laufwerk mit dem CD-ROM
+   zu verbinden.
+7. Arbeite mit dem neuen Laufwerk.
+8. Wenn Du alles erledigt hast, schlie·e das Programm. Die Verbindung zwischen
+   CD-ROM und Tonigy-Laufwerk wird wieder aufgehoben.
+
+Weitere Informationen in der Dokumentation (Englisch oder Deutsch)
+
+Support und RÅckmeldungen
+=========================
+
+Schicke Fragen, Fehlerberichte und VorschlÑge an tonigy@defgroup.com
+Du kannst auch Tonigy's Homepage besuchen: http://www.tonigy.com
+

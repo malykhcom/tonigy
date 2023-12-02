@@ -1,0 +1,2 @@
+SOURCE\attach.c(11): Warning! W202: Symbol 'Tmp1' has been defined, but not referenced
+SOURCE\attach.c(22): Warning! W202: Symbol 'Tmp2' has been defined, but not referenced

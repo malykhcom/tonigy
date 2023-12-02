@@ -1,0 +1,6 @@
+#include <os2.h>
+#include "register.h"
+
+POINTER 1 "..\\register.ico"
+
+rcinclude "register.dlg"

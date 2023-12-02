@@ -1,0 +1,50 @@
+1.
+        Verbinden
+        Trennen
+        Einstellungen
+        Beenden
+
+        CD-ROM Laufwerk
+        Tonigy Laufwerk
+                Nicht gew„hlt
+        Status
+                Verbunden
+                Getrennt
+        Auto-Verbindung
+                EIN
+                AUS
+2.
+        Laufwerk verbinden
+        Laufwerk trennen
+        Einstellungen Laufwerk
+        Allgemeine Optionen
+        Ende
+
+3. CD-ROM Laufwerk X: - Einstellungen
+        Tonigy Laufwerk
+                Laufwerksbuchstabe:
+                        -Nicht gew„hlt-
+                Automatisch verbinden
+                Log-Warnungen/-Fehler (tonigy.log)
+         Sektoren lesen
+                Anti-Jitter
+                Vorauslesen
+                           -Autoerkennung-
+                           1 Sektor
+                           2 Sektoren
+                Korrekturversuche
+         OK
+         Abbruch
+4. Allgemeine Einstellungen
+         CD-ROM Laufwerke
+                 Erster Buchstabe:
+                           -Autoerkennung-
+         Sektoren Lesen
+                 H”chste Priorit„t
+         Sprache
+                 Englisch
+                 Deutsch
+                 Hinweis: Neustart von Tonigy
+                 bewirkt Sprachwechsel
+         OK
+         Abbruch

@@ -1,0 +1,85 @@
+                Tonigy v1.7. Audio/Video/Data CD IFS for OS/2
+                     (c) Copyright DEF Group, 2001-2002.
+
+Notations
+=========
+
+INF  Information
+NEW  New feature
+FIX  Fixed
+CHG  Changed
+
+Version 1.0
+===========
+
+INF: First release
+
+Version 1.1
+===========
+
+NEW: Information about sectors blocks is added to CDINFO.TXT
+NEW: The BLOCKS.RAW directory
+NEW: The pop-up menu in the main window
+NEW: The "General Option" dialog
+NEW: The "Highest Priority" option
+NEW: German interface and documentation
+NEW: The ability to select the first letter of CD-ROM drives
+NEW: Logging warning and error messages into a virtual file on a Tonigy disk
+NEW: Online help (English and German)
+NEW: The named pipe to control Tonigy
+CHG: The background color of the main window was changed to pale gray
+CHG: The new method of Jitter detection
+CHG: The README file was renamed to README.TXT
+CHG: The RAW directory was renamed to TRACKS.RAW
+CHG: The Tonigy web site URL and the support E-Mail was changed
+CHG: Minor changes
+
+Version 1.2
+===========
+
+NEW: Mapping video tracks into MPG files
+CHG: Advanced information about tracks
+CHG: Minor changes
+
+Version 1.3
+===========
+
+NEW: Mapping data/iso tracks into ISO files
+NEW: The FILES.CDI directory with files of a CD-I disk
+CHG: The interface of the main window was changed
+CHG: The Setup Drive and General Options windows was merged
+CHG: Minor changes
+
+Version 1.4
+===========
+
+NEW: The BOOT.IMG directory with the boot image of the first ISO track
+CHG: The method of track type determination was improved
+FIX: Wrong size of ISO images
+FIX: Possible lockup of system due to wrong determination of track type
+
+Version 1.5
+===========
+
+NEW: The WarpIN package is available
+NEW: The URL object was added into the Tonigy Folder
+FIX: Wrong return code from FS_FILEATTRIBUTE
+FIX: Sometimes wrong info about jitter presence in CDINFO.TXT
+FIX: Wrong size of boot image if emulated media is not floppy disk
+FIX: INSTALL.CMD add invalid IFS= statement if full path contains space(s)
+
+Version 1.6
+===========
+
+NEW: The TRACKS.WAV directory with audio tracks
+CHG: Directories will not be shown if they are empty
+NEW: Russian interface and messages
+
+Version 1.7
+===========
+
+NEW: Abitily to eject CD (see the pop-up menu)
+CHG: Appended drive letters to pop-up menu's items (Attach, Detach)
+
+E-Mail:    tonigy@defgroup.com
+Home page: http://www.tonigy.com

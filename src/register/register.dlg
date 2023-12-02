@@ -1,0 +1,18 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "register.h"
+
+DLGTEMPLATE IDD_REGISTER LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Tonigy - Register", IDD_REGISTER, 12, 13, 281, 89, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Enter key (you can paste a text from the clipboard "
+                        "by using Shift+Insert keys):", -1, 4, 77, 273, 8
+        MLE             "", ID_KEY, 2, 22, 277, 52, MLS_HSCROLL | 
+                        MLS_VSCROLL | MLS_IGNORETAB | WS_GROUP
+        DEFPUSHBUTTON   "Ok", ID_OK, 71, 4, 40, 14
+        PUSHBUTTON      "Cancel", ID_CANCEL, 168, 4, 40, 14
+    END
+END

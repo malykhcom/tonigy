@@ -1,0 +1,50 @@
+1.
+	Attach
+        Detach
+        Setup
+        Exit
+
+	CD-ROM letter
+        Tonigy letter
+        	Not Selected
+        Status
+        	Attached
+                Detached
+        Autoattach
+        	On
+                Off
+2.
+	Attach drive
+        Detach drive
+        Setup drive
+        General options
+        Exit
+
+3. CD-ROM drive X: - Setup
+	Tonigy Drive
+        	Drive letter:
+                	-Not selected-
+                Automatic attach
+                Log warnings and errors (tonigy.log)
+        Sectors Reading
+        	Anti-Jittering
+                Preread
+                	-Autodetect
+                	1 sector
+                        2 sectors
+                Tries to correct
+        OK
+        Cancel
+4. General options
+	CD-ROM Drives
+        	First letter:
+                	-Autodetect-
+        Sectors Reading
+        	Highest priority
+        Language
+        	English
+                German
+        	Note: Restart Tonigy to apply
+                language change
+        OK
+        Cancel

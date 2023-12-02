@@ -1,0 +1,44 @@
+Lesen von Audio-Sektoren
+
+Zum Registrieren oder fÅr weitergehende Informationen suche bitte den
+"Register Now" Bereich der Tonigy-Seite auf (http://www.tonigy.com).
+
+Tonigy - es ist Zeit zum Registrieren
+Die 30-Tage Probierzeit sind vorbei.
+Wenn Du Tonigy weiterverwenden willst, must Du es registrieren
+
+Track Start LÑnge Modus Sektor Typ
+
+AUDIO
+DATA/ISO
+DATA/ISO-BOOT
+DATA/XA
+UNBEKANNT
+
+Tonigy v1.2. Audio/Video CD IFS fÅr OS/2. Der pfiffige Ersatz fÅr Grabber
+
+Tonigy ist ein installierbares Dateisystem fÅr CDs (CD IFS) das Tracks einer
+Audio-CD in WAV oder RAW-Dateien und Tracks einer Video-CD in MPG-Dateien
+abbildet. Benutze es um auf Audio- und Video-Tracks wie auf normale Dateien
+zuzugreifen.
+
+zeigt Audio-Tracks als WAV- oder RAW-Dateien
+zeigt Video-Tracks als MPG-Dateien
+unterstÅtzt adaptives Anti-Jitter beim Lesen von Audiosektoren
+
+Wenn Du die verwendete Sprache Ñndern willst, rufe das KontextmenÅ
+auf (rechte Maustaste Åber dem Hauptfenster klicken), Ñndere die
+Sprache, beende und starte Tonigy neu.
+
+Einige CD-ROM Modelle haben Probleme mit der Synchronisation beim
+Lesen von Audiosektoren (Jitter).
+
+Ein Prinzip von Anti-Jitter ist das Åberlappende Lesen von Audiosektoren.
+
+NEU: Abbilden von Video-Tracks auf MPG-Dateien
+GEé: Mehr Informationen Åber Tracks
+GEé: Kleinere énderungen
+
+
+
+

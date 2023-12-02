@@ -1,0 +1,40 @@
+Audio Sectors Reading
+
+For registration  or additional information, visit the "Register Now!" section
+of the Tonigy site (http://www.tonigy.com).
+
+Tonigy - It's time to register!
+30-day evaluation period is over.
+If you want to continue using Tonigy, you must register it.
+
+Track Start Length Mode Sector Type
+
+AUDIO
+DATA/ISO
+DATA/ISO-BOOT
+DATA/XA
+UNKNOWN
+
+Tonigy v1.2. Audio/Video CD IFS for OS/2. The smart replacement of grabbers.
+
+Tonigy is an Audio/Video CD IFS for OS/2 that maps tracks of Audio CD into
+WAV or RAW files and tracks of Video CD into MPG files. Use it for 
+accessing audio and video tracks like ordinary files.
+
+represents audio tracks as WAV or RAW files
+represents video tracks as MPG files
+supports adaptive Anti-Jittering for reading audio sectors
+
+If you want to change the using language, call pop-up menu 
+(by clicking button 2 of the pointing device on the Main window's workspace),
+switch Language and restart Tonigy.
+
+Some CD-ROM drive models has troubles with synchronization of reading audio
+sectors (jitter).
+
+An idea of Anti-Jittering is to read audio sectors with some overlap.
+
+NEW: Mapping video tracks into MPG files
+CHG: Advanced information about tracks
+CHG: Minor changes
+

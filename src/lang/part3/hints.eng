@@ -1,0 +1,12 @@
+You can read the CDINFO.TXT file on  a Tonigy drive for some information about
+the compact disk and CD-ROM drive.
+
+RAW files does not contain a RIFF WAV header, therefore they should be used to
+prevent the L3ENC/2 encoder from adding a click in the begin of MP3 files.
+
+Tonigy stores extended attributes  in the EA.INI file  in the Tonigy directory.
+This file is a standard OS/2 user profile (a binary INI file).
+
+Extended  attributes  of  *.WAV  and  *.RAW files  are  compact-disk-dependent, 
+therefore ".LONGNAME" attribute can  be  used to set  your own  WPS titles for
+this files.

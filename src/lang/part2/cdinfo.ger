@@ -1,0 +1,53 @@
+LW T: (Spiegelung von E:) Informationen. Erzeugt von Tonigy v1.1
+
+Laufwerk nicht bereit
+
+Inhaltsverzeichnis:
+
+Track     Start      L„nge   Typ    Dauer
+--------------------------------------------
+   1         30      18264  AUDIO   04:03
+   2      18294      16394  DATEN
+--------------------------------------------
+
+1 Audiotrack(s).
+
+Sektorbl”cke:
+
+Block     Start      L„nge    Typ    Dauer
+--------------------------------------------
+--------------------------------------------
+
+1 Audioblock(s).
+
+Dieses CD-ROM hat Probleme mit der Lesesynchronisation
+Dieses CD-ROM hat keine Probleme mit der Lesesynchronisation
+
+CD-ROM F„higkeiten:
+
+   Untersttzt 2048-Byte und 2352-Byte Sektoren (cooked und raw)
+   Untersttzt nur 2048-Byte Sektoren (cooked)
+
+   Lese- und Schreiboperationen untersttzt
+   Nur Lesen m”glich
+
+   Kann Daten lesen und Audio, Video oder beides abspielen
+   Kann nur Daten lesen
+
+   ISO-9660 Interleavingformat und -berspringen untersttzt
+   Keine Interleaveuntersttzung
+
+   Vorauslesen intern untersttzt
+   Kein Vorauslesen untersttzt
+
+   Untersttzt Audio-Kanal Manipulation
+   Keine Audio-Kanal Manipulation
+
+   Adressieren logischer Bl”cke und Minuten-Sekunden-Rahmen untersttzt
+   Logische Blockadressierung untersttzt
+
+   Lesen von Mode 2 Sektoren untersttzt
+   Untersttzt keine Mode 2 Sektoren
+
+   Untersttzt Lesen von CD-DA Sektoren
+   Keine Untersttzung von CD-DA

@@ -1,0 +1,47 @@
+                  Tonigy v1.0. Audio CD IFS for OS/2
+                   (c) Copyright Deffie Group, 2001.
+
+Main Screen
+===========
+
+If "Auto attach" options is on,  this drive  will be  automatic attached  when
+Tonigy is started.  Warning: All drives will be automatic detached when Tonigy
+is closed.
+
+You can use following keys to control Tonigy main screen:
+
+ Alt+A  Attach drive
+ Alt+D  Detach drive
+ Alt+S  Setup drive
+ Alt+X  Exit 
+
+Setup Dialog
+============
+
+When "Anti-Jitter"  options  is  on,  Tonigy  tries to correct CD-ROM  drive's 
+troubles with synchronization of reading.  It slows reading speed,  but it  is
+necessary for some CD-ROM drive models. To  determination of presence  of such
+troubles with  synchronization of  reading, work  with any  RAW or WAV file on
+Tonigy drive (copy it, play it or view it by hex-editor, state of "Anti-Jitter"
+options is unimportant). Then see a text after "x audio track(s)." line in the
+CDINFO.TXT on Tonigy drive. If this text is "This CD-ROM Drive has no troubles
+with synchronization of reading.",  you can disable "Antijitter" to increase a
+track reading speed.
+
+"Tries to correct" options sets the amount of attempts of  correction troubles
+with  synchronization  of  reading.  When  still troubles cannot  be corrected,
+Tonigy returns a really readed data. If you have slow CD-ROM  drive and listen
+to WAV or RAW files  from  Tonigy drive,  it better  to set  a small  value of
+correction tries. But when WAV or RAW files  from Tonigy drive  are encoded or
+copied, it better to set a bigger value.
+
+Extended Attributes
+===================
+
+Tonigy supports extended  attributes for  all files on Tonigy drive.  Extended
+attributes are stored in EA.INI file. Extended attributes of WAV and RAW files
+are compact-disk-dependent  (keys  are  a number  of track,  a start sector of
+track and a length of track).
+
+E-Mail:    tonigy@zworg.com
+Home page: http://tonigy.hypermart.net

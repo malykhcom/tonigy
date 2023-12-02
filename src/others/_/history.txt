@@ -1,0 +1,45 @@
+                 Tonigy - Audio/Video CD IFS for OS/2
+                   (c) Copyright Deffie Group, 2001.
+
+Notations
+=========
+
+ INF   Information
+ NEW   New feature
+ FIX   Fixed
+ CHG   Changed
+
+Version 1.0
+===========
+
+INF: First release
+
+Version 1.1
+===========
+
+NEW: Information about sectors blocks is added to CDINFO.TXT
+NEW: BLOCKS.RAW directory
+NEW: Pop-up menu in the main window
+NEW: "General Option" dialog
+NEW: "Highest Priority" option
+NEW: German interface and documentation
+NEW: First letter of CD-ROM drives selection 
+NEW: Logging warning and error messages into a virtual file on a Tonigy disk
+NEW: Online help (English and German)
+NEW: Named pipe for control Tonigy
+CHG: Background color of the main window is changed to pale gray
+CHG: New method of Jitter detection
+CHG: README file is renamed to README.TXT
+CHG: RAW directory is renamed to TRACKS.RAW
+CHG: Tonigy web site URL and support E-Mail are changed
+CHG: Minor changes
+
+Version 1.2
+===========
+
+NEW: Mapping video tracks into MPG files
+CHG: Advanced information about tracks
+CHG: Minor changes
+
+E-Mail:    tonigy@defgroup.com
+Home page: http://www.tonigy.com

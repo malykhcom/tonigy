@@ -1,0 +1,440 @@
+Tonigy Dokumentation
+
+
+                öber Tonigy
+
+Tonigy v1.1. Ein Audio CD-IFS fÅr OS/2. Der pfiffige Ersatz fÅr Grabber.
+
+Tonigy ist ein Programm, dass Audio-Tracks einer CD in WAV- oder RAW-Dateien
+auf ein neues, virtuelles Laufwerk ummappt. Benutze es, um Audio-Tracks wie
+ganz normale Dateien anzusprechen.
+
+Hauptmerkmale:
+
+ IFS (installierbares Dateisystem) fÅr OS/2
+ Zeigt Tracks als WAV- oder RAW-Dateien
+ Einfache Bedienung und Einrichtung Åber PM-GUI OberflÑche
+ Englisch/Deutsche SprachfÅhrung und Dokumentation
+ UnterstÅtzt Erweiterte Attribute (lesend/schreibend)
+ UnterstÅtzt angepasstes Anti-Jittering
+ Option "Hîchste PrioritÑt" fÅr langsame CD-Roms und PCs
+ Warnungen und Fehler werden mitgeschrieben (Log-Funktion)
+ UnterstÅtzt Kontrolle durch Named Pipes
+
+                Hilfe fÅr Hilfe
+
+Druck auf F1 ruft die Online-Hilfe fÅr Tonigy auf
+
+                Schnellstart
+
+
+1. Starte das Tonigy-Programm aus dem WPS-Ordner.
+2. WÑhle das CD-ROM aus, dass Tonigy ansprechen soll.
+3. Klicke auf "Setup" oder drÅcke die Tastenkombination Alt+S.
+4. WÑhle irgendeinen freien, aber NICHT BUSY markierten Laufwerksbuchstaben
+   aus den vorhandenen aus, der zum Tonigy-Laufwerk wird [ich habe einfach T:
+   gewÑhlt ;-)  - KK].
+5. Klicke den OK-Button an oder drÅcke die ENTER-Taste um den Setup-Dialog zu
+   schlie·en.
+6. Klicke auf "Attach" oder drÅcke Alt+A, um das Tonigy-Laufwerk mit dem
+   CD-ROM zu verbinden.
+7. Arbeite mit dem neuen Laufwerk.
+8. Wenn Du alles erledigt hast, schlie·e das Programm. Die Verbindung
+   zwischen CD-ROM und Tonigy-Laufwerk wird wieder aufgehoben.
+
+Wenn Du deutsche MenÅs und Hilfe haben willst, rufe das Pop-Up-MenÅ durch
+Klick auf die rechte Maustaste auf, wÑhrend sich der Mauszeiger Åber dem
+Hauptfenster von Tonigy befindet, stelle Sprache (Language) auf Deutsch
+(German) und starte Tonigy neu.
+
+                Hauptfenster
+
+Folgende Tasten kînnen verwendet werden, um das Hauptfenster von Tonigy zu
+steuern:
+
+Alt+A  Laufwerk ins System einbinden
+Alt+D  Laufwerk aus dem System nehmen
+Alt+S  Laufwerkseinstellungen
+Alt+X oder Alt+F4 Programm beenden
+
+Verwende "Allgemeine Einstellungen" im Pop-Up-MenÅ (rechte Maustaste im
+Hauptfenster von Tongy) um globale Einstellungen zu verÑndern.
+
+Wenn "Automatisch verbinden" gewÑhlt ist, wird das Laufwerk bei jedem Start
+von Tonigy automatisch verbunden.
+
+Achtung: Alle Tonigy-Laufwerke werden automatisch getrennt, wenn Tonigy
+geschlossen wird.
+
+
+                 LW-Einstellungs-Fenster
+
+Wenn "Automatisch verbinden" gewÑhlt ist, wird das Laufwerk bei jedem Start
+von Tonigy automatisch verbunden.
+
+Alle Aktionen von Tonigy kînnen in ein virtuelles TONIGY.LOG File auf dem
+Tonigy Laufwerk geschrieben werden, wenn die "Log-Warnungen/-Fehler"
+(tonigy.log)-Option eingestellt ist.
+
+Einige CD-ROMs haben Probleme mit der Sysnchronisation beim Lesen (sog.
+Jitter). Um dieses zu korrigieren, kann die "Anti-Jitter" FÑhigkeit von
+Tonigy genutzt werden. Um das Vorhandensein von Jitter festzustellen, arbeite
+mit irgendeiner RAW- oder WAV-Datei eines Tonigy-Laufwerkes (kopiere die Datei,
+spiele sie ab oder betrachte sie in einem HEX-Editor; der Status der "Anti-
+Jitter" Optionen ist dabei unerheblich). Dann suche in der Datei CDINFO.TXT auf
+dem Tonigy-Laufwerk nach folgender Zeile
+
+x Audio block(s).
+
+Wenn dieser Text lautet
+
+Dieses CD-ROM hat keine Probleme mit der Synchronisation beim Lesen.
+
+kann "Anti-Jittering" ausgeschaltet werden.
+
+Hinweis: "Anti-Jittering" reduziert die Lesegeschwindigkeit, daher sollte es
+ausgeschaltet werden, wenn das CD-ROM keinen Jitter produziert und Du hîhere
+Lesegeschwindigkeiten willst.
+
+Wenn die "Anti-Jitter" Option geschaltet ist, dann versucht Tonigy, mîgliche
+Synchonisationsprobleme des Laufwerkes beim Lesen zu korrigieren. Wenn die
+Probleme nach der gewÑhlten Anzahl Versuche nicht behoben werden kînnen, werden
+die tatsÑchlich gelesenen Daten an das Programm geliefert, das das Tonigy-LW
+gerade verwendet (vergl. dazu das TONIGY.LOG). Wenn Du ein langsames CD-ROM
+verwendest und .WAV oder .RAW-Dateien abhîrst, sollte die Anzahl von Versuchen
+zwischen 2 und 5 liegen. Wenn diese Daten encodiert (kopiert) werden oder das
+CD-ROM schnell genug ist, kînnen auch hîhere Werte gesetzt werden. Ein nur
+einmaliger Versuch ist in jedem Falle wenig sinnvoll.
+
+                Fenster Allgemeine Einstellungen
+
+
+"Highest Priority" (Hîchste PrioritÑt) Ñndert die AusfÅhrungsprioritÑt des
+Threads, der die Sektoren ausliest. Wenn diese Option geschaltet ist, wird der
+Thread auf 'time-critical' und darin Level 31 gesetzt (dies ist die hîchste
+Einstellung, die OS/2 fÅr einen Teilproze· zulÑsst und garantiert ihm den
+hîchsten Anteil an Rechenzeit unter allen laufenden Prozesssen und Threads).
+Ansonsten hat der Lese-Thread die normale PrioritÑts-Klasse und darin den Level
+31.
+
+"Language" (Sprache) Radio-Schalter setzen die Sprache, in der Tonigy sich
+prÑsentiert. Das Programm mu· nach einer énderung neu gestartet werden, um
+diese wirksam werden zu lassen.
+
+                Fenster Verbindung fehlgeschlagen
+
+Dieses Fenster wird gezeigt, wenn Tonigy nicht in der Lage war, ein virtuelles
+Laufwerk zu erstellen bzw. die Verbindung dazu herzustellen. Die hÑufigste
+Ursache fÅr diesen Fehler ist der Versuch, ein Laufwerk anzusprechen, das
+bereits in Benutzung durch ein anderes Programm oder einen anderen Prozess ist.
+WÑhle einen anderen LW-Buchstaben und versuche, Tonigy erneut zu verbinden.
+
+                Information fÅr fortgeschrittene Nutzer
+
+Dieser Abschnitt enthÑlt Informationen fÅr Fortgeschrittene.
+
+                Anti Jittering
+
+Die Idee bei der Funktion von Anti-Jittering ist es, Sektoren mit einem
+gewissen 'öberhang' zu lesen. Viele Grab-Programme nutzen diesen Gedanken,
+um Jitter zu korrigieren, aber Tonigy fÅhrt neue Methoden ein um die Jitter
+Korrektur eleganter und verlÑsslicher zu machen. Erstens kann das Ma· der
+öberlagerung von Tonigy dynamisch verÑndert werden, wobei statistische Daten
+von vorherigen Leseversuchen herangezogen werden. Zweitens achtet Tonigys
+Anti-Jittering auf ungleichmÑ·ige Ergebnisse des Sektoren-Auslesens.
+
+                Erweiterte Attribute
+
+Das Tonigy-IFS unterstÅtzt das Lesen und Schreiben von Erweiterten Attributen.
+
+Erweiterte Attribute von *.WAV und *.RAW-Dateien sind abhÑngig von der CD.
+
+Tonigy speichert die EAs in einer EA.INI-Datei im Tonigy-Inhaltsverzeichnis.
+Diese Datei ist eine binÑre Standard-OS/2 INI-Datei (wie System- oder User.INI)
+
+                Named Pipe
+
+Tonigy kann durch die \PIPE\TONIGY\CONTROL Named Pipe gesteuert werden. Es
+handelt sich hierbei um eine Nachrichten-Pipe, ein Kommando sollte dieser Pipe
+als 1 Nachricht Åbergeben werden. Ein Kommando besteht aus einem Wort (keine
+öberprÅfung auf Gro·/Kleinschreibung), dem Namen des Kommandos und in einigen
+FÑllen einem oder mehr Parametern, getrennt durch ein Leerzeichen. Beispiel:
+
+QueryDrivesNumber
+attach 1
+
+Nach dem Schreiben des Kommandos in die Named Pipe mu· das aufrufende Programm
+eine RÅckgabezeichenkette (return string) Åbernehmen. Diese beginnt mit einem
+dezimalen return code. Wenn das Kommando Daten zurÅckgibt und der return code
+gleich 0 ist (kein Fehler), enthÑlt der Rest des return strings Daten.
+Beispiel:
+
+0
+31
+0 E:
+
+               QueryDrivesNumber
+
+Anmerkungen
+
+Das Kommando erfragt die Anzahl der CD-ROM Laufwerke.
+
+Parameter
+
+Keine
+
+RÅckgabe
+
+FehlerCode (ErrorCode)
+oder
+0 NumberOfDrives (Anzahl der Laufwerke)
+
+Beispiel
+
+Gesendet:             QueryDrivesNumber
+Erhalten:             0 2
+Kommentar:            There are two CD-ROM drives.
+                      Zwei CD-ROM Laufwerke vorhanden
+
+                QueryCDROMDrive
+
+Anmerkungen
+
+Das Kommando ermittelt den LW-Buchstaben des CD-ROMs
+
+Parameter
+
+NumberOfDrive
+Die Nummer des Laufwerks im Bereich von 0 bis N-1 wobei N die Anzahl der
+CD-ROM Laufwerke darstellt
+
+Returns (RÅckgaben)
+
+FehlerCode (ErrorCode)
+oder
+0 LetterOfCDROMDrive (Buchstabe des CD-ROMs).
+
+Beispiel
+
+Gesendet:           QueryCDROMDrive 1
+Erhalten:           0 E:
+Kommentar:          A letter of the second CD-ROM drive is F:.
+                    Der Buchstabe des zweiten CD-ROMs ist F:.
+
+
+                QueryTonigyDrive
+
+Anmerkungen
+
+Das Kommando ermittelt den LW-Buchstaben des CD-ROMs
+
+Parameter
+
+NumberOfDrive
+Die Nummer des Laufwerks im Bereich von 0 bis N-1 wobei N die Anzahl der
+CD-ROM Laufwerke darstellt
+
+Returns (RÅckgaben)
+
+FehlerCode (ErrorCode)
+oder
+0 LetterOfTonigyDrive (Buchstabe des CD-ROMs).
+falls kein Tonigy-Laufwerk ausgewÑhlt wurde, wird ein leerer String als
+Tonigy-Laufwerk zurÅckgegeben
+
+Beispiel
+
+Gesendet:           QueryTonigyDrive 1
+Erhalten:           0 T:
+Kommentar:          A letter of the second CD-ROM drive is T:.
+                    Der Buchstabe des zweiten Tonigy-Laufwerkes ist T:.
+
+                QueryStatus
+
+Anmerkungen
+
+Dies Kommando erfragt den Status des Tonigy-Laufwerkes
+
+Parameter
+
+NumberOfDrive
+Die Nummer des Laufwerks im Bereich von 0 bis N-1 wobei N die Anzahl der
+CD-ROM Laufwerke darstellt
+
+
+Returns (RÅckgaben)
+
+FehlerCode (ErrorCode)
+oder
+0 Status
+0 als Status - das LW ist getrennt, 1 als Status - das LW ist verbunden.
+
+Beispiel
+
+Gesendet:           QueryStatus 1
+Erhalten:           0 0
+Kommentar:          Das zweite Tonigy-Laufwerk ist getrennt.
+
+
+                Attach
+
+Anmerkungen
+
+Das Kommando verbindet das Tonigy-Laufwerk.
+
+Parameter
+
+NumberOfDrive
+Die Nummer des Laufwerks im Bereich von 0 bis N-1 wobei N die Anzahl der
+CD-ROM Laufwerke darstellt
+
+Returns (RÅckgaben)
+
+FehlerCode (ErrorCode)
+
+Example
+
+Gesendet:           Attach 1
+Erhalten:           0
+Kommentar:          Das zweite Tonigy-Laufwerk ist verbunden.
+
+
+                Detach
+
+Anmerkungen
+
+Das Kommando trennt das Tonigy-Laufwerk.
+
+Parameter
+
+NumberOfDrive
+Die Nummer des Laufwerks im Bereich von 0 bis N-1 wobei N die Anzahl der
+CD-ROM Laufwerke darstellt
+
+Returns (RÅckgaben)
+
+FehlerCode (ErrorCode)
+
+Beispiel
+
+Gesendet:             Detach 1
+Erhalten:             0
+Kommentar:            Das Tonigy-Laufwerk ist getrennt worden.
+
+
+                Einsatzbeispiele (REXX)
+
+[...]
+say "Tonigy lÑuft nicht."
+[...]
+say "Laufwerke: "Drives
+[...]
+say "Beliebige Taste um alle Tonigy-LWs zu trennen"
+[...]
+say "Beliebige Taste um alle Tonigy-LWs zu verbinden"
+[...]
+Status="Verbunden"
+[...]
+Status="Getrennt"
+[...]
+say "Laufwerk"
+
+                TONIGY.LOG
+
+
+TONIGY.LOG Meldungen:
+
+ Laufwerk x ist verbunden
+
+Das Tonigy-Laufwerk ist durch den Benutzer oder automatisch verbunden.
+
+ Header der CD ist eingelesen
+
+Tonigy hat einen CD-Wechsel erkannt und den Header neu gelesen.
+
+ Jitter entdeckt, aber Anti-Jitter ausgeschaltet
+
+Tonigy hat Jitter beim ôffnen eines Tracks oder Blocks entdeckt, aber
+Anti-Jittering ist ausgeschaltet. Es sollte fÅr dieses LW eingeschaltet
+werden.
+
+ Warnung: LONG READ gescheitert (Track x, Sektor x)
+ Warnung: LONG READ gescheitert (Block x, Sektor x)
+
+Das LONG READ-Kommando hat einen Error-Code zurÅckgegeben. Das Kommando wird
+wiederholt.
+
+ Fehler: LONG READ gescheitert (Track x, Sektor x)
+ Fehler: LONG READ gescheitert (Block x, Sektor x)
+
+Das LONG READ-Kommando hat einen Error-Code nach dem 5. Lese-Versuch
+zurÅckgegeben. Du solltest eine andere CD oder ein anderes LW verwenden.
+
+ Warnung: Anti-Jitter gescheitert (Track x, Sektor x)
+ Warnung: Anti-Jitter gescheitert (Block x, Sektor x)
+
+Jitter der momentan gelesenen Daten kann nicht korrigiert werden. Das LONG
+READ Kommando und das Anti-Jittering werden wiederholt.
+
+ Fehler: Anti-Jitter gescheitert (Track x, Sektor x)
+ Fehler: Anti-Jitter gescheitert (Block x, Sektor x)
+
+Jitter der gelesenen Daten kann auch nach eingestellter Wiederholanzahl nicht
+korrigiert werden. Du solltest eine andere CD oder ein anderes LW verwenden.
+
+
+                Versionsgeschichte
+
+Version 1.1
+
+ Version 1.1
+
+Neu: Information Åber Sektorblîcke zu CDINFO.TXT hinzugefÅgt
+Neu: BLOCKS.RAW Verzeichnis
+Neu: Pop-Up MenÅ im Hauptfenster
+Neu: "Allegemeine Einstellungen"-Dialog
+Neu: "Hîchste PrioritÑt"-Option
+Neu: Deutsche BedienerfÅhrung und Dokumentation
+Neu: Erster Buchstabe der CD-ROM Auswahl
+Neu: Warnungen/Fehler werden in virtuelles Log auf dem Tonigy-LW geschrieben.
+Neu: Online-Hilfe (Englisch und Deutsch)
+Neu: Named Pipe zur Kontrolle/Steuerung von Tonigy
+GeÑ: Hintergrundfarbe des Hauptfensters zu blass-grau geÑndert
+GeÑ: Neue Methode der Jitter-Erkennung
+GeÑ: README-Datei zu README.TXT umbenannt
+GeÑ: RAW-Verzeichnis nach TRACKS.RAW umbenannt
+GeÑ: Tonigy Web-Seiten und Kundendiest E-mail geÑndert
+GeÑ: Einige Kleinigkeiten
+
+                Lizenzinformationen
+
+Siehe license.txt.
+
+Anmerkung des öbersetzers: Dieser Text wurde nicht Åbersetzt, da erstens
+der öbersetzer kein Jurist ist und wesentliche Teile nicht adÑquat
+Åbertragen kann und zweitens amerikanisches Lizenzrecht in weiten Teilen
+in Deutschland NICHT gilt bzw. keine Entsprechung findet.
+
+Insbesondere hat der Passus bezÅglich des Verbotes der WeiterverÑu·erung an
+Dritte vor deutschen Gerichten keinen Bestand.
+
+Dies sollte aber niemanden davon abhalten, den Gedanken der Shareware zu
+fîrdern, dergestalt, dass das Programm, wie von den Autoren gefordert, nach
+30 Tagen zu registrieren ist, wenn es weiter benutzt wird, anderenfalls vom
+Rechner zu lîschen ist. BITTE SEID FAIR - die Programmierer von Tonigy sind
+es auch: sie lassen das Programm OHNE JEDE EinschrÑnkung testen.
+
+                 Registrierung
+
+Die Registrierungskosten betragen nur 20 US-Dollar. Die Registrierung gilt
+fÅr die aktuelle und alle zukÅnftigen Versionen von Tonigy. FÅr zusÑtzliche
+Informationen Åber die Registrierung lese die Datei DOC\register.txt im Tonigy
+Verzeichnis oder besuche die Tonigy Home-Page (http://somewhere.in.the.net).
+
+öbersetzung der Hilfe-Texte und der deutschen OberflÑche:
+
+Klaus Kulbarsch
+FIDO (preferred ;-)
+2:2426/1205  V.34
+2:2426/1206  X.75
+E-Mail: kulle@t-online.de

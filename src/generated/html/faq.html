@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta name="GENERATOR" content="PPWIZARD version 01.152 on OS/2, FREE tool for Windows, OS/2, DOS and UNIX by Dennis Bareis (http://www.labyrinth.net.au/~dbareis/ppwizard.htm)">
+
+<title>Tonigy - FAQ and Tips</title>
+<meta name="description" content="The additional information about Tonigy">
+<meta name="keywords" content="Tonigy,FAQ,tips,compact disk,CD-ROM,WAV,RAW,MPG,MP3,encoder,LONGNAME">
+<style type="text/css"><!--
+a { text-decoration: none; }
+a:hover { text-decoration: none; color: #ff0000; }
+a:active { text-decoration: none; color: #000000; }
+td { font-size: 10pt; }
+font { font-size: 8pt; }
+--> </style>
+</head>
+<body bgcolor=#408080 text=#000000 link=#0000ff vlink=#0000ff alink=#000000 topmargin=4 leftmargin=4 rightmargin=4 bottommargin=4 marginwidth=4 marginheight=4>
+
+<table bgcolor=#000000 width=100% cellspacing=0 cellpadding=0 border=0>
+<tr><td><table width=100% cellspacing=1 cellpadding=0 border=0><tr><td bgcolor=#e6e6e6 align=center><img src=images/tonigy.gif alt="Tonigy - Multimedia CD System/2" width=455 height=55></td></tr></table></td></tr></table>
+
+<table border=0 cellspacing=0 cellpadding=0><tr><td height=2><table border=0 cellspacing=0 cellpadding=0><tr><td></td></tr></table></td></tr></table>
+
+<table bgcolor=#000000 width=100% cellspacing=0 cellpadding=0 border=0>
+<tr><td><table width=100% cellspacing=1 cellpadding=0 border=0><tr><td bgcolor=#e6e6e6><table width=100% cellspacing=0 cellpadding=2 border=0>
+<tr align=center>
+<td width=13% ><a href=index.html>About</a></td>
+<td width=16% bgcolor=#b0b0b0 ><a href=faq.html>FAQ and Tips</a></td>
+<td width=13% ><a href=history.html>History</a></td>
+<td width=16% ><a href=screens.html>Screenshots</a></td>
+<td width=13% ><a href=download.html>Download</a></td>
+<td width=16% ><a href=register.html>Register Now!</a></td>
+<td width=13% ><a href=links.html>Links</a></td>
+</tr></table></td></tr></table></td></tr></table>
+
+<table border=0 cellspacing=0 cellpadding=0><tr><td height=8><table border=0 cellspacing=0 cellpadding=0><tr><td></td></tr></table></td></tr></table>
+
+<table bgcolor=#000000 width=100% cellspacing=0 cellpadding=0 border=0>
+<tr><td><table width=100% cellspacing=1 cellpadding=3 border=0><tr><td bgcolor=#e6e6e6 align=center><b>FAQ and Tips</b></td></tr></table></td></tr></table>
+
+<table border=0 cellspacing=0 cellpadding=0><tr><td height=2><table border=0 cellspacing=0 cellpadding=0><tr><td></td></tr></table></td></tr></table>
+
+<table bgcolor=#000000 width=100% cellspacing=0 cellpadding=0 border=0>
+<tr><td><table width=100% cellspacing=1 cellpadding=4 border=0>
+<tr>
+<td valign=top bgcolor=#e6e6e6>
+<font size=-1>
+<br>
+<center><b><a href=history.html#Tonigy>Last version</a></b><br><br>
+2002 Sep 19 (1.7)<br><br>
+<b><a href=history.html>Last site update</a></b><br><br>
+2002 Sep 19
+</center><br>
+<p align=center><b>Do you need additional information?</b></p>
+<p>E-mail us: <a href=mailto:tonigy@defgroup.com>tonigy@defgroup.com</a></p>
+<p>Read overviews of Tonigy:</p>
+<p>1. <a href="http://www.geocities.co.jp/SiliconValley-Bay/4081/cdmp3.html#tonigy">Tonigy IFS</a> [Japanese]</p>
+<p>2. <a href="http://www.goldencode.com/atlos2/notes/tonigy/tonigy.html">Tonigy - A Virtual CD Installable File System</a> [English]</p>
+<p>3. <a href="http://www.os2ezine.com/20010816/page_4.html">Making and Playing mp3 files with OS/2</a> [English]</p>
+<p>Tonigy-related software:</p>
+<p>1. <a href="http://hobbes.nmsu.edu/cgi-bin/h-search?key=leechmp3">Leech MP3</a>.</p>
+<p>2. <a href="http://www.xmission.com/~scorey/">Tonigy Utility</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</font>
+<table width=160 border=0 cellspacing=0 cellpadding=0><tr><td></td></tr></table>
+</td>
+<td width=100% valign=top bgcolor=#ffffff>
+
+<!-- begin of main frame -->
+
+<p align=center><b>Tips and hints</b></p>
+<p align=justify>You can read the CDINFO.TXT file on a Tonigy drive for some information about a compact disk and a CD-ROM drive.</p>
+<p align=justify>RAW files do not contain a RIFF WAV header, thus they should be used to prevent the L3ENC/2 encoder from adding a click in the begin of MP3 files.</p>
+<p align=justify>Tonigy stores extended attributes in the EA.INI file in the Tonigy directory. This file is a standard OS/2 user profile (a binary INI file).</p>
+<p align=justify>Extended attributes of *.WAV, *.RAW, *.MPG and *.ISO files are compact-disk-dependent, therefore ".LONGNAME" attribute can be used to set your own WPS titles for these files.</p>
+<p align=center><b>General questions</b></p>
+<p align=justify><b>Q</b>: What are Mode 1 and Mode 2 sectors? Why is their size different?</p>
+<p align=justify><b>A</b>: A compact disk is divided in sectors. The actual raw size of each sector is 2352 bytes. Different CD formats use that 2352 bytes in different ways:</p>
+<ul type=disc compact>
+<li>An audio sector uses all 2352 bytes for audio data.</li>
+<li>A Mode 1 sector uses 16 bytes for a synchronization record and a sector header, 288 bytes for error detection and correction info. Thus size of user data is 2048 bytes in Mode 1.</li>
+<li>A Mode 2 sector uses 24 bytes for a synchronization record, a sector header and a subheader. Also 280 bytes are used for error detection and correction info in Mode 2 Form 1 or 4 bytes are used for error detection info in Mode 2 Form 2. Thus size of user data is 2048 bytes in Mode 2 Form 1 and 2324 bytes in Mode 2 Form 2.</li>
+</ul>
+<p align=center><b>CD-ROM drive-related and system-wide troubles</b></p>
+<a name=OS2CDROM.DMD>
+<p align=justify><b>Q</b>: WAV and RAW files are shown on the Tonigy drive, but the SYS0021 (The drive is not ready) error occurs during trying to work with these files. The CD-ROM drive capabilities list in the CDINFO.TXT file contains the "Does not support reading of CD-DA sectors" line. Can I use Tonigy or other audio grabbers with this CD-ROM drive?</p>
+<p align=justify><b>A</b>: You cannot if the CD-ROM drive does not support reading of CD-DA sectors really. But if the CD-ROM drive supports it and OS/2 provides the wrong information about capabilities of the CD-ROM drive you can try to use one of modified OS2CDROM.DMD files. Download some versions of OS2CDROM.DMD in the [<a href=download.html>Download</a>] section.</p>
+<p align=justify><b>Q</b>: Tonigy and some programs (for example, PMView) determine the drive letter of the CD-ROM drive wrong. How to correct it?</p>
+<p align=justify><b>A1</b>: Try to use the "Reserve Drive Letter" feature of OS/2:</p>
+<p align=center>Reserve Drive Letter</p>
+<p align=justify>With RESERVEDRIVELETTER in CONFIG.SYS you have the ability to control assignment of some drive letters by reserving one or more consecutive drive letters during the earliest part of system initialization. (Note: In Warp4+ you can assign this option with the Reserved page of "Drives - Properties" dialog. CONFIG.SYS will automaticly be updated with the values you specified. In Warp3 this feature can be used after installing of FixPack 25 and later only.)<br> Syntax: RESERVEDRIVELETTER=drive<br> Remark: CD-ROM, Optical drives, Virtual disks and Tape drives gets drive letters beginning with the NEXT letter you have defined with RESERVEDRIVELETTER. For example you have a  harddisk with two partitions and one CD-ROM drive. Without RESERVEDRIVELETTER setup the hard disk partitions will get drive letter C: and D:, the CD-ROM drive will get drive letter E:. If you want your CD-ROM drive to become drive G: you should use "RESERVEDRIVELETTER=F:".</p>
+<p align=justify><b>A2</b>: If it appears after installing FP14 for OS/2 Warp v4.0 or FP1 for OS/2 WarpServer v4.5 (for e-Business), renew OS2KRNL and OS2LDR: <a href=ftp://ftp.software.ibm.com/ps/products/os2/fixes/v4warp/english-us/xr_m014/w41106.zip>w41106.zip</a> (for Warp v4.0), <a href=ftp://ftp.software.ibm.com/ps/products/os2/fixes/v4.5warp/english-us/xr_e001/uni1106.zip>uni1106.zip</a> (for WarpServer v4.5-UNI), or <a href=ftp://ftp.software.ibm.com/ps/products/os2/fixes/v4.5warp/english-us/xr_e001/smp1106.zip>smp1106.zip</a> (for WarpServer v4.5-SMP). The size of each zip-archive is about 800-900 kb.</p>
+
+<!-- end of main frame -->
+<p>&nbsp;</p>
+</td>
+</tr></table></td></tr></table>
+<table border=0 cellspacing=0 cellpadding=0><tr><td height=2><table border=0 cellspacing=0 cellpadding=0><tr><td></td></tr></table></td></tr></table>
+<table bgcolor=#000000 width=100% cellspacing=0 cellpadding=0 border=0>
+<tr><td><table width=100% cellspacing=1 cellpadding=4 border=0>
+<tr><td align=center bgcolor=#e6e6e6>
+<font size=-1>&copy; Copyright <a href="http://www.defgroup.com">DEF Group</a>, 2001-2002.</font>
+</td></tr></table></td></tr></table>
+
+</body>
+</html>

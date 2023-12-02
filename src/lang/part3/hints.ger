@@ -1,0 +1,14 @@
+Du kannst die CDINFO.TXT Datei auf einem Tonigy-Laufwerk lesen,  um Infos ber
+die CD und das CD-ROM-Laufwerk zu erhalten.
+
+RAW-Dateien  enthalten  keinen  RIFF-Header,  wie  ihn  WAV-Dateien haben. Sie 
+k”nnen  deswegen  genutzt werden  um L3ENC/2-Encoder  davon  abzuhalten, einen 
+Klick am Beginn von MP3-Dateien zu produzieren.
+
+Tonigy   speichert  Erweiterte  Attribute  in  einer  EA-INI-Datei  im  Tonigy-
+Verzeichnis. Diese DAtei ist eine bin„re Standard OS/2-INI-Datei.
+
+Erweiterte Attribute  von *.WAV und *.RAW-Dateien  sind  abh„ngig  von  der CD,
+deswegen kann das ".LONGNAME" Attribut genutzt werden um eigene  WPS-Titel fr
+diese Dateien zu erstellen.
+
