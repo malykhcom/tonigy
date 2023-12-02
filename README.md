@@ -9,8 +9,6 @@ See also:
 
 - [tonigy.com](https://tonigy.com/)
 
+- [Tonigy (2001-2002) source code](https://malykh.blogspot.com/2023/12/tonigy-2001-2002-source-code.html)
+
 - [Tonigy 20+ лет](https://malykh.blogspot.com/2021/12/tonigy-20.html)
-
-
-
-
