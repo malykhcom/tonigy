@@ -2,6 +2,14 @@
 
 This is the source code of Tonigy written by me for OS/2 in 2001-2002.
 
+![Tonigy application](main_e.gif)
+
+![FC/2](fc_audio.gif)
+
+![MP3 encoding](gogo.gif)
+
+![Qu/2 Player](qu.gif)
+
 The idea behind the IFS separation is taken from here: [OS/2 Installable File Systems - Part 1/3](http://www.edm2.com/0103/os2ifs1.html), [OS/2 Installable File Systems - Part 2/3](http://www.edm2.com/0105/os2ifs2.html), [OS/2 Installable File Systems - Part 3/3](http://www.edm2.com/0107/os2ifs3.html)
 
 
