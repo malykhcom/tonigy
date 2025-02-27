@@ -16,7 +16,7 @@ Anton Malykh
 
 See also:
 
-- [tonigy.com](https://tonigy.com/)
+- [Tonigy - Multimedia CD System/2](https://malykh.com/soft/tonigy/)
 
 - [Tonigy (2001-2002) source code](https://malykh.blogspot.com/2023/12/tonigy-2001-2002-source-code.html)
 
